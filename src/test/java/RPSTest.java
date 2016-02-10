@@ -20,6 +20,12 @@ public class RPSTest {
     RPS rpsTest = new RPS();
     assertEquals(true, rpsTest.checkWinner("Paper", "Rock"));
   }
+
+  @Test
+  public void checkWinner_returnsTieIfPlayerAndCompChooseTheSameThing_true() {
+    RPS rpsTest = new RPS();
+    assertEquals(true, rpsTest.checkWinner("Paper", "Paper"));
+  }
 }
 
 

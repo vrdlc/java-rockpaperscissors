@@ -10,11 +10,13 @@ public class RPS {
 
   }
   public static Boolean checkWinner(String player, String comp){
-    if (player == "Rock" && comp == "Scissors"){
+    if (player == "Rock" && comp == "Rock" || player == "Paper" && comp == "Paper" || player == "Scissors" && comp == "Scissors") {
+      return true;
+    } else if (player == "Rock" && comp == "Scissors") {
       return true;
     } else if (player == "Scissors" && comp == "Paper") {
       return true;
-    } else if (player == "Paper" && comp == "Rock"){
+    } else if (player == "Paper" && comp == "Rock") {
       return true;
     } else {
       return false;
