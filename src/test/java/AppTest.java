@@ -20,4 +20,12 @@ public class AppTest extends FluentTest {
       goTo("http://localhost:4567/home");
       assertThat(pageSource()).contains("Rock, Paper, Scissors");
   }
+
+  @Test
+  public void checkWinner() {
+    goTo("http://localhost:4567/home");
+    fill("#player").with("Rock");
+    submit(".btn");
+    assertThat(pageSource()).contains("Player Choice: Rock");
+  }
 }
