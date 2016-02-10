@@ -1,5 +1,5 @@
 import java.util.HashMap;
-
+import java.util.Random;
 import spark.ModelAndView;
 import spark.template.velocity.VelocityTemplateEngine;
 
@@ -26,5 +26,18 @@ public class RPS {
     if (player == "Rock" && comp == "Rock" || player == "Paper" && comp == "Paper" || player == "Scissors" && comp == "Scissors"){
       tie = "It's a tie";
     } return tie;
+  }
+
+  public static String compChoice(){
+    Random compChoiceGenerator = new Random();
+    String[] choices = { "Rock", "Paper", "Scissors" };
+    int randomizedWord = compChoiceGenerator.nextInt(3);
+    String result = "";
+    for (int i = 0; i <= choices.length; i++){
+      if (i == randomizedWord){
+        result = choices[i];
+      }
+    }
+    return result;
   }
 }

@@ -27,6 +27,12 @@ public class RPSTest {
     assertEquals("It's a tie", rpsTest.checkTie("Paper", "Paper"));
   }
 
+  @Test
+  public void compChoice_shouldBeAString_true(){
+    RPS rpsTest = new RPS();
+    String result = rpsTest.compChoice();
+    assertEquals(true, result instanceof String);
+  }
 
 }
 
