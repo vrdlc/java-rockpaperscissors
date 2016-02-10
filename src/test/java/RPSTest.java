@@ -4,27 +4,27 @@ import static org.junit.Assert.*;
 public class RPSTest {
 
   @Test
-  public void checkWinner_returnsTrueIfRockBeatsScissors_true() {
+  public void checkWinner_returnsTrueIfRockBeatsScissors_winner() {
     RPS rpsTest = new RPS();
-    assertEquals(true, rpsTest.checkWinner("Rock", "Scissors"));
+    assertEquals("You win!", rpsTest.checkWinner("Rock", "Scissors"));
   }
 
   @Test
-  public void checkWinner_returnsTrueIfScissorsBeatsPaper_true() {
+  public void checkWinner_returnsTrueIfScissorsBeatsPaper_winner() {
     RPS rpsTest = new RPS();
-    assertEquals(true, rpsTest.checkWinner("Scissors", "Paper"));
+    assertEquals("You win!", rpsTest.checkWinner("Scissors", "Paper"));
   }
 
   @Test
-  public void checkWinner_returnsTrueIfPaperBeatsRock_true() {
+  public void checkWinner_returnsTrueIfPaperBeatsRock_winner() {
     RPS rpsTest = new RPS();
-    assertEquals(true, rpsTest.checkWinner("Paper", "Rock"));
+    assertEquals("You win!", rpsTest.checkWinner("Paper", "Rock"));
   }
 
   @Test
-  public void checkTie_returnsTieIfPlayerAndCompChooseTheSameThing_itsATie() {
+  public void checkWinner_returnsTieIfPlayerAndCompChooseTheSameThing_itsATie() {
     RPS rpsTest = new RPS();
-    assertEquals("It's a tie", rpsTest.checkTie("Paper", "Paper"));
+    assertEquals("You tie", rpsTest.checkWinner("Paper", "Paper"));
   }
 
   @Test

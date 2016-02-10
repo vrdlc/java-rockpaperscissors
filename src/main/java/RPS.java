@@ -18,10 +18,9 @@ public class RPS {
     get("/results", (request, response) -> {
       HashMap model = new HashMap();
 
-
       String player = request.queryParams("player");
       String comp = compChoice();
-      Boolean results = checkWinner(player, comp);
+      String results = checkWinner(player, comp);
       model.put("player", player);
       model.put("comp", comp);
       model.put("results", results);
@@ -30,23 +29,18 @@ public class RPS {
     }, new VelocityTemplateEngine());
   }
 
-  public static Boolean checkWinner(String player, String comp){
-    if (player == "Rock" && comp == "Scissors") {
-      return true;
-    } else if (player == "Scissors" && comp == "Paper") {
-      return true;
-    } else if (player == "Paper" && comp == "Rock") {
-      return true;
+  public static String checkWinner(String player, String comp){
+    if (player.equals(comp)){
+      return "You tie";
+    } else if (player.equals("Rock") && comp.equals("Scissors")) {
+      return "You win!";
+    } else if (player.equals("Scissors") && comp.equals("Paper")) {
+      return "You win!";
+    } else if (player.equals("Paper") && comp.equals("Rock")) {
+      return "You win!";
     } else {
-      return false;
+      return "You Lose";
     }
-  }
-
-  public static String checkTie(String player, String comp){
-    String tie = "";
-    if (player == "Rock" && comp == "Rock" || player == "Paper" && comp == "Paper" || player == "Scissors" && comp == "Scissors"){
-      tie = "It's a tie";
-    } return tie;
   }
 
   public static String compChoice(){
