@@ -7,8 +7,29 @@ import static spark.Spark.*;
 
 public class RPS {
   public static void main(String[] args) {
+    staticFileLocation("/public");
 
+    get("/home", (request, response) -> {
+      HashMap model = new HashMap();
+      model.put("template", "templates/home.vtl");
+      return new ModelAndView(model, "templates/layout.vtl");
+    }, new VelocityTemplateEngine());
+
+    get("/results", (request, response) -> {
+      HashMap model = new HashMap();
+
+
+      String player = request.queryParams("player");
+      String comp = compChoice();
+      Boolean results = checkWinner(player, comp);
+      model.put("player", player);
+      model.put("comp", comp);
+      model.put("results", results);
+      model.put("template", "templates/results.vtl");
+      return new ModelAndView(model, "templates/layout.vtl");
+    }, new VelocityTemplateEngine());
   }
+
   public static Boolean checkWinner(String player, String comp){
     if (player == "Rock" && comp == "Scissors") {
       return true;
