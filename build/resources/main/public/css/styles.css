@@ -1,0 +1,44 @@
+body {
+  text-align: center;
+  margin-top: 50px;
+}
+
+#rock {
+  background-image: url(/img/rock.jpg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  height: 63px;
+  width: 63px;
+  border: none;
+  background-color: transparent;
+}
+
+#paper {
+  background-image: url(/img/paper.jpg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  height: 70px;
+  width: 70px;
+  border: none;
+  background-color: transparent;
+}
+
+#scissors {
+  background-image: url(/img/scissors.jpg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  height: 68px;
+  width: 68px;
+  border: none;
+  background-color: transparent;
+}
+
+#playagain {
+  background-image: url(/img/playagain.jpg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  height: 200px;
+  width: 200px;
+  border: none;
+  background-color: transparent;
+}
