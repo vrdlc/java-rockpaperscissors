@@ -12,6 +12,8 @@ public class RPS {
   public static Boolean checkWinner(String player, String comp){
     if (player == "Rock" && comp == "Scissors"){
       return true;
+    } else if (player == "Scissors" && comp == "Paper") {
+      return true;
     } else {
       return false;
     }

@@ -9,11 +9,11 @@ public class RPSTest {
     assertEquals(true, rpsTest.checkWinner("Rock", "Scissors"));
   }
 
-  // @Test
-  // public void checkWinner_returnsTrueIfScissorsBeatsPaper_true() {
-  //   RPS rpsTest = new RPS();
-  //   assertEquals(true, rpsTest.checkWinner("Scissors", "Paper"));
-  // }
+  @Test
+  public void checkWinner_returnsTrueIfScissorsBeatsPaper_true() {
+    RPS rpsTest = new RPS();
+    assertEquals(true, rpsTest.checkWinner("Scissors", "Paper"));
+  }
 }
 
 
