@@ -22,10 +22,12 @@ public class RPSTest {
   }
 
   @Test
-  public void checkWinner_returnsTieIfPlayerAndCompChooseTheSameThing_true() {
+  public void checkTie_returnsTieIfPlayerAndCompChooseTheSameThing_itsATie() {
     RPS rpsTest = new RPS();
-    assertEquals(true, rpsTest.checkWinner("Paper", "Paper"));
+    assertEquals("It's a tie", rpsTest.checkTie("Paper", "Paper"));
   }
+
+
 }
 
 
