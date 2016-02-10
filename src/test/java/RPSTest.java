@@ -14,6 +14,12 @@ public class RPSTest {
     RPS rpsTest = new RPS();
     assertEquals(true, rpsTest.checkWinner("Scissors", "Paper"));
   }
+
+  @Test
+  public void checkWinner_returnsTrueIfPaperBeatsRock_true() {
+    RPS rpsTest = new RPS();
+    assertEquals(true, rpsTest.checkWinner("Paper", "Rock"));
+  }
 }
 
 

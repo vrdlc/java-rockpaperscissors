@@ -14,6 +14,8 @@ public class RPS {
       return true;
     } else if (player == "Scissors" && comp == "Paper") {
       return true;
+    } else if (player == "Paper" && comp == "Rock"){
+      return true;
     } else {
       return false;
     }
