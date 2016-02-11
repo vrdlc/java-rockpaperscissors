@@ -39,8 +39,6 @@ public class RPSTest {
     RPS rpsTest = new RPS();
     assertEquals("Player 1 wins", rpsTest.twoPlayer("Rock", "Scissors"));
   }
-
-
 }
 
 

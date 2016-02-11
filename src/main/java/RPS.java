@@ -2,7 +2,6 @@ import java.util.HashMap;
 import java.util.Random;
 import spark.ModelAndView;
 import spark.template.velocity.VelocityTemplateEngine;
-
 import static spark.Spark.*;
 
 public class RPS {
@@ -14,6 +13,7 @@ public class RPS {
       model.put("template", "templates/home.vtl");
       return new ModelAndView(model, "templates/layout.vtl");
     }, new VelocityTemplateEngine());
+
 //Computer v Player results page
     get("/results", (request, response) -> {
       HashMap model = new HashMap();
@@ -34,6 +34,7 @@ public class RPS {
       model.put("template", "templates/twoplayer.vtl");
       return new ModelAndView(model, "templates/layout.vtl");
     }, new VelocityTemplateEngine());
+
 //Two player result page
     get("/resultstwoplayer", (request, response) -> {
       HashMap model = new HashMap();
@@ -48,6 +49,7 @@ public class RPS {
       return new ModelAndView(model, "templates/layout.vtl");
     }, new VelocityTemplateEngine());
   }
+
 //Computer vs Player logic
   public static String checkWinner(String player, String comp){
     if (player.equals(comp)){
@@ -90,6 +92,4 @@ public class RPS {
       return "Player 2 wins";
     }
   }
-
-
 }
