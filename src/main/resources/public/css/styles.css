@@ -33,6 +33,17 @@ body {
   background-color: transparent;
 }
 
+#twoplayer {
+  margin-right: 20px;
+  background-image: url(/img/twoplayers.jpg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  height: 94px;
+  width: 170px;
+  border: none;
+  background-color: transparent;
+}
+
 #playagain {
   background-image: url(/img/playagain.jpg);
   background-repeat: no-repeat;
@@ -41,4 +52,12 @@ body {
   width: 200px;
   border: none;
   background-color: transparent;
+}
+
+input[type=radio] {
+  display: none;
+}
+
+img {
+border-style : none;
 }

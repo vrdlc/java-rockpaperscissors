@@ -34,6 +34,11 @@ public class RPSTest {
     assertEquals(true, result instanceof String);
   }
 
+  @Test
+  public void twoPlayer_returnsTrueifRockBeatsScissors_win() {
+    RPS rpsTest = new RPS();
+    assertEquals("Player 1 wins", rpsTest.twoPlayer("Rock", "Scissors"));
+  }
 }
 
 
